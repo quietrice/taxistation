@@ -5,14 +5,22 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @EnableAutoConfiguration
-@RequestMapping("/car")
+@RequestMapping("/")
 public class SampleController {
 
-    @GetMapping("/")
+    @GetMapping("car")
     @ResponseBody
     Car home() {
-        return new Car(1,"test");
+
+        return new Car(1,"test", "р123мр77", "bmw", "black", 4, 111);
     }
+
+    @PostMapping("driver")
+    @ResponseBody
+    Driver dri(){
+        return new Driver(113131, 111);
+    }
+
 
     @PostMapping("/add")
     @ResponseBody
@@ -24,3 +32,4 @@ public class SampleController {
         SpringApplication.run(SampleController.class, args);
     }
 }
+
