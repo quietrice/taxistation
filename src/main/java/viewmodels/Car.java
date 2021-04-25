@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 public class Car {
     int id;
     @JsonProperty(value = "name", required = true)
-    @NotNull(message="name is required")
+
     String name;
 
     public Car(int id, String name) {
